@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from "./components/Icon";
+import Icon from "./components/Icon"
 import { react18 } from "./assets/icons"
 
 function App() {
