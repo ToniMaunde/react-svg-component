@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
-import icons from "../assets/iconPaths.json"
+import React from 'react'
 
-export default function Icon({iconName}) {
-
-  const svgViewBox = icons[iconName].viewBox
-  const svgPath = icons[iconName].d
+export default function Icon(props) {
+  const {viewBox: svgViewBox, d: svgPath} = props.icon
 
   const svgClass = () => {
     if (svgViewBox === "0 0 18 18") return "icon icon-small"

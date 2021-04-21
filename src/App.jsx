@@ -1,25 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Icon from "./components/Icon";
+import { react18 } from "./assets/icons"
 
 function App() {
   return (
     <ul className="react-logos">
       <li className="react-logos__card">
-      <Icon iconName="react18"/>
-      <p className="react-logos__label">18*18 icon</p>
+        <Icon icon={react18}/>
+        <p className="react-logos__label">18*18 icon</p>
       </li >
-      <li className="react-logos__card">
-        <Icon iconName="react24"/>
-        <p className="react-logos__label">24*24 icon</p>
-      </li>
-      <li className="react-logos__card">
-        <Icon iconName="react36"/>
-        <p className="react-logos__label">36*36 icon</p>
-      </li>
-      <li className="react-logos__card">
-        <Icon iconName="react48"/>
-        <p className="react-logos__label">48*48 icon</p>
-      </li>
     </ul>
   )
 }
