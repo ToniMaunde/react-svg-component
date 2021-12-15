@@ -1,7 +1,7 @@
-import React from 'react'
+import { TIcon } from "../types"
 
-export default function Icon(props) {
-  const {viewBox: svgViewBox, d: svgPath} = props.icon
+export default function Icon(props: TIcon) {
+  const {viewBox: svgViewBox, d: svgPath} = props;
 
   const svgClass = () => {
     if (svgViewBox === "0 0 18 18") return "icon icon-small"
