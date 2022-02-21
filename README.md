@@ -20,7 +20,27 @@ I decide to port my current SVG Icon Component strategy that I have been using o
 I did not come up with the original idea and unfortunately I can't find the original medium post with this strategy using Vue.js. If you know the author of said post, let me know so I can properly credit him.
 
 ## Prerequisites
-Have Node.js version >= 14 installed on your machine
+Have Node.js version >= 14 installed on your machine and knowing a tiny bit of React.js and SVGs.
+
+## Directory Structure
+├── src
+│   ├── assets
+│   │   └── icons.ts
+│   ├── components
+│   │   └── Icon.tsx
+│   ├── types
+│   │   └── index.ts
+│   ├── App.tsx
+│   ├── favicon.svg
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── tsconfig.json
+└── vite.config.js
 
 ## Installing
 Clone the repository
