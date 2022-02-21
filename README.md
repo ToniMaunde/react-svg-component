@@ -23,6 +23,7 @@ I did not come up with the original idea and unfortunately I can't find the orig
 Have Node.js version >= 14 installed on your machine and knowing a tiny bit of React.js and SVGs.
 
 ## Directory Structure
+.
 ├── src
 │   ├── assets
 │   │   └── icons.ts
