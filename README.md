@@ -55,6 +55,7 @@ So, for now...
 
    ```javascript
     const iconName =  {
+      className: "class name(s) go here"
       viewBox: "0 0 30 30", //an example
       d: "the path of the svg goes here"
     }
@@ -64,45 +65,46 @@ So, for now...
    If you don't understand what SVGs are and how they work, check out [this CSS Tricks article](https://css-tricks.com/using-svg/) and search for Sarah Drasner's videos on Youtube regarding SVGs.
 3. In the Icon.jsx file we have
    ```javascript
-    import React from 'react'
+    import { TIcon } from "../types"
 
-    export default function Icon(props) {
-      const {viewBox: svgViewBox, d: svgPath} = props.icon
-
-      const svgClass = () => {
-        if (svgViewBox === "0 0 18 18") return "icon icon-small"
-        else if (svgViewBox === "0 0 24 24") return "icon icon-normal"
-        else if (svgViewBox === "0 0 36 36") return "icon icon-medium"
-        return "icon icon-large"
-      }
+    export default function Icon(props: TIcon) {
+      const {viewBox: svgViewBox, d: svgPath, className} = props;
 
       return (
-        <svg viewBox={svgViewBox} className={svgClass()}>
+        <svg viewBox={svgViewBox} className={`icon ${className}`}>
           <path d={svgPath}/>
         </svg>
       )
     }
    ```
-   The icon to be rendered is passed as a prop through the icon object. The **svgViewBox** and the **svgPath** attributes are a result of destructuring the icon prop. Finally, the **svgClass** function returns the classes depending on the svgViewBox attribute value. Tweak this function to suit your purposes. These classes can later on be used to style the icon[s].
+   The icon to be rendered is passed as a prop through the icon object. The **svgViewBox** and the **svgPath** attributes are a result of destructuring the icon prop. Finally, the **className** will
+   allow you to specifically target an icon. I added the "icon" class by default to allow the targetting of 
+   all icons.
 
 4. Import the Icon component and the icon you wish to render
    ```javascript
+    // here we are importing the Icon component
     import Icon from "./components/Icon"
-    // here we are importing the icon with the name "react18" from the icon.js file
-    import { react18 } from "./assets/icons"
 
-    return (
-    <ul className="react-logos">
-      <li className="react-logos__card">
-        <Icon icon={react18}/>
-        <p className="react-logos__label">18*18 icon</p>
-      </li >
-    </ul>
-    )
+    // and here we are importing all icons we want to render through the 
+    // Icon component as props
+    import { react18, react24, react36, react48 } from "./assets/icons"
+
+    function App() {
+      return (
+        <>
+          <h3 className="title">Here is an example</h3>
+          <section className="icons-row">
+            <Icon {...react18} />
+            <Icon {...react24} />
+            <Icon {...react36} />
+            <Icon {...react48} />
+          </section>
+        </>
+      )
+    }
    ```
-   As you can see, we pass the icon we imported as a prop named **icon** as our Icon component expects. The rest is just my BEM CSS styles for making this look good.
-
-5. And that's all she wrote.
+   As you can see we **deconstruct our icons as props** for the Icon component and it does the rest.
 
 ## Built with
 I used [Vite.js](https://vitejs.dev/) by Evan you to quickly scaffold this "project".
