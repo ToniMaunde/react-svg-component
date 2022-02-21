@@ -4,6 +4,13 @@ I decide to port my current SVG Icon Component strategy that I have been using o
 [Link for the tweet](https://twitter.com/_developit/status/1382838799420514317?s=20)
 
 # Changelog
+21/02/2022
+- added a new property to the Icon component
+- added for examples of styled icons + an hover state animation
+
+15/12/2021
+- moved the project to Typescript
+
 21/04/2021
 - discarded the iconPaths.json file
 - added the icons.js to export icons as modules
