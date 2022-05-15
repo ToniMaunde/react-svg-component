@@ -1,3 +1,4 @@
+/* Resets */
 *,
 *::before,
 *::after {
@@ -11,10 +12,11 @@ html {
 }
 
 body {
+  display: flex;
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -23,56 +25,65 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+/* Layout */
 #root {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 2rem 10rem 0 10rem;
+  height: 100%;
 }
+
+/* Typography */
 
 .title {
   font-size: 1.8rem;
   font-weight: bold;
   color: #565050;
   display: block;
-  margin: 4rem auto; 
+  margin: 2rem auto; 
 }
 
-.icons-row {
+/* Some styles for the container of all SVGs being rendered */
+
+.icons {
   width: fit-content;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   gap: 2rem;
-  transform: scale(2);
 }
 
-.icons-row svg {
-  display: block;
+/* We can easily style and animate any SVG we render with this 'framework' */
+.icon {
+  fill: blueviolet;
+  width: 4rem;
   height: auto;
-  background-color: #ff46c2;
-  border-radius: 2px;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 }
 
-.icons-row svg:hover {
-  fill: #ffffff;
+/* We can also target a specific icon through its id */
+.icon#random {
+  fill: rgb(83, 71, 255);
 }
 
-.react-18 {
-  width: 18px;
+.icon:hover {
+  fill: rgb(192, 13, 162);
+  width: 6rem;
 }
 
-.react-24 {
-  width: 24px;
+.icon#random:hover {
+  fill: rgb(68, 0, 255);
 }
 
-.react-36 {
-  width: 36px;
+/* Here we're targetting the svg with a path with an id=path3 */
+.icon path#path3 {
+  fill: rgb(88, 5, 165);
 }
 
-.react-48 {
-  width: 48px;
+.icon:hover path#path3 {
+  fill: rgb(151, 6, 127);
 }

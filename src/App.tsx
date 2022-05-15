@@ -1,18 +1,19 @@
-import Icon from "./components/Icon"
-import { react18, react24, react36, react48 } from "./assets/icons"
+import { Icon } from "./components/Icon";
+import { randomIcon } from "./assets/random";
+import { reactIcon } from "./assets/react";
+import { unpinIcon } from "./assets/unpin";
 
 function App() {
   return (
-    <>
+    <main>
       <h3 className="title">Here is an example</h3>
-      <section className="icons-row">
-        <Icon {...react18} />
-        <Icon {...react24} />
-        <Icon {...react36} />
-        <Icon {...react48} />
+      <section className="icons">
+        <Icon {...unpinIcon}/>
+        <Icon {...randomIcon}/>
+        <Icon {...reactIcon}/>
       </section>
-    </>
+    </main>
   )
 }
 
-export default App
+export default App;
