@@ -4,6 +4,9 @@ I decide to port my current SVG Icon Component strategy that I have been using o
 [Link for the tweet](https://twitter.com/_developit/status/1382838799420514317?s=20)
 
 # Changelog
+01/06/2022
+- updated the docs
+
 15/05/2022
 - added tree-shaking
 - added multi-path rendering
@@ -103,6 +106,8 @@ Regardless of the number of paths of the SVG, the Icon component will be able to
    If you don't understand what SVGs are and how they work, check out [this CSS Tricks article](https://css-tricks.com/using-svg/) and search for Sarah Drasner's videos on Youtube regarding SVGs.
 3. In the Icon.tsx file we have
    ```javascript
+    // You can add new props to this type depending on your needs and make the necessary adjustments
+    // on the component
     export type TIcon = {
       viewBox: string;
       paths: Array<{
