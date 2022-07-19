@@ -1,9 +1,13 @@
 # React SVG Icon Component
-I decide to port my current SVG Icon Component strategy that I have been using on my Vue.js projects after a tweet I saw.
+I decide to port my current SVG Icon Component strategy that I ~~have~~ had been using on my Vue.js projects after a tweet I saw.
 
 [Link for the tweet](https://twitter.com/_developit/status/1382838799420514317?s=20)
 
 # Changelog
+19/07/2022
+- updated the docs
+- changed TIcon property customClasses to className
+
 01/06/2022
 - updated the docs
 
